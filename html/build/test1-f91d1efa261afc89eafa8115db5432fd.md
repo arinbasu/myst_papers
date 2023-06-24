@@ -1,0 +1,100 @@
+---
+title: Test
+authors: 
+  - name: Arindam Basu
+  - email: arinbasu99@yahoo.com
+export: docx
+date: 2023-07-24
+bibliography: refs.bib
+---
+
+:::{"part": "abstract"}
+Abstract
+
+Write an abstract here. 
+Separate the title of the abstract from the rest of the body or a heading from the rest of the body using a blank line.
+One line per line is fine.
+The abstract is unformatted.
+
+:::
+
+## Introduction
+Myst markdown or Curvenote markdown is a very versatile tool where you can use markdown and jupyter notebooks together to weave codes, figures, and data to tell a story. You can add a jupyter notebook for generating figures and tables, and use the markdown to write the narrative. As we know writing any academic or scholarly document requires the writer to provide the following structure (this can vary but generally this is true of most structures):
+
+* An Abstract
+* An Introduction or the background
+* A section on methods etc
+* A set of results if that is applicable
+* A discussion section
+* Tables
+* Figures
+* Citations throughout the paper
+* A list of references at the end of the paper appended to it
+
+The above list in myst markdown can be conveniently converted to a table
+Let's copy paste and add what we want by way of describing each one.
+
+:::{list-table} Table explaining the elements of a paper
+:name: tbl_elements
+* - Item
+  - Description
+* - An Abstract
+  - A short statement summarising the paper
+* - Introuction
+  - An Introduction or the background
+* - Methods
+ - A section on methods etc
+* - Results
+  - A set of results if that is applicable
+* - Discussion
+  - A discussion section
+* - Tables
+  - Tabular format to present complex ideas
+* - Figures
+  - Plots, or image formats
+* - Citations 
+  - Should be throughout the paper. Also as a list of references at the end of the paper appended to it
+:::
+
+This list table now becomes table one if you want to refer to it as [](#tbl_elements) where the name of the table is what you write within a pair of parentheses after a pair of square brackets. 
+
+## How to add tables
+
+* Add tables as list tables 
+* Convert a list to a table
+* Use a markdown table as a list table
+
+:::{list-table} Test
+:name: Test_table
+* - test
+  - test2
+* - test3
+  - test4
+:::
+
+## Cross-reference a table
+
+If you want to cross-reference a table, use `[](#table_name)`. Doing this will produce a highlighted table number that will be automatically updated. Example: As seen in [](#Test_table), this is a thing blah blah.
+
+We can also write a markdown table and then use it as a list table. 
+
+:::{list-table} Markdown table as list table
+:name: Test_mdtable
+* - | test | test2 |
+    |------|-------|
+    | test3 | test4 |
+:::
+
+In this case [](#Test_mdtable) is a list table
+
+## Figures and images can be added
+
+:::{figure} https://www.rd.com/wp-content/uploads/2019/11/cat-10-e1573844975155-scaled.jpg
+:name: cat_web
+This image of cat is taken off the web
+:::
+
+I can refer to the image as [](#cat_web)
+
+I could also save this image of the cat to the local folder where I have the paper and then replace the rest of the url with `./`, it would have the same effect.
+

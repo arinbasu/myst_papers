@@ -1,0 +1,35 @@
+---
+title: Test
+authors: 
+  - name: Arindam Basu
+  - email: arinbasu99@yahoo.com
+export: docx
+date: 2023-07-24
+bibliography: test.bib
+---
+
+:::{"part": "abstract"}
+Test Abstract
+:::
+
+## Introduction
+This is an introduction
+
+:::{list-table} Test
+:name: Test_table
+* - test
+  - test2
+* - test3
+  - test4
+:::
+
+As seen in [](#Test_table), this is a thing
+
+:::{list-table} Markdown table as list table
+:name: Test_mdtable
+* - | test | test2 |
+    |------|-------|
+    | test3 | test4 |
+:::
+
+In this case [List Table](#Test_mdtable) is a list table
